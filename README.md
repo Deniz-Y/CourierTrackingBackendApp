@@ -31,15 +31,19 @@ This project is a **Spring Boot RESTful web application** designed for tracking 
 - **Builder Pattern**: Used in entity and DTO conversions.
 
 ## 🏛️ Architecture
+
+```
 +-------------+       HTTPS       +--------------------+       JDBC        +------------------+
 |             |  ─────────────▶   |                    |  ─────────────▶   |                  |
 |   Client    |                   |   Spring Boot API  |                   |     PostgreSQL   |
 | (Postman)   |   REST API Calls  |   (EC2 Instance)   |   Database Conn. |      (RDS)       |
 |             |  ◀─────────────   |                    |  ◀─────────────   |                  |
 +-------------+     JSON Resp.    +--------------------+                   +------------------+
+```
+
 
 ## 📌 API Endpoints
-Base Url: #http://13.48.149.150:8080
+Base Url: # http://13.48.149.150:8080
 
 - Courier Endpoints
 
@@ -84,7 +88,7 @@ You can test the RESTful API using Postman or any HTTP client by sending request
 
 🚀 Example Requests
 
-#Create a courier:
+# Create a courier:
 
 POST /api/couriers 
 
@@ -95,7 +99,7 @@ Body:
   "courierNumber": "CR-1234"
 }
 
-#Add courier location:
+# Add courier location:
 
 POST /api/courier-locations
 
@@ -108,7 +112,7 @@ Body:
   "timestamp": "2025-06-30T12:00:00"
 }
 
-#Add a store:
+# Add a store:
 
 POST /api/stores
 
